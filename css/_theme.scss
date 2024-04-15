@@ -1,0 +1,255 @@
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+
+}
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+// @font-face {
+//     font-family: Raleway-ExtraBold;
+//     src: url(../fonts/Raleway-ExtraBold.ttf);
+// }
+
+
+// @font-face {
+//     font-family: roboto-Bold;
+//     src: url(../fonts/Roboto-Bold.ttf);
+// }
+
+// @font-face {
+//     font-family: roboto-medium;
+//     src: url(../fonts/Roboto-Medium.ttf);
+// }
+
+// @font-face {
+//     font-family: roboto-regular;
+//     src: url(../fonts/Roboto-Regular.ttf);
+// }
+
+
+body{
+    font-family: Montserrat-Regular, sans-serif !important;
+}
+
+.heading_sect{
+    text-align: left;
+    h2{
+        font-size: calc(1.5rem + .5vw);
+        // color: $theme-dark-blue;
+        text-transform: uppercase;
+    }
+}
+
+.absolute_contant{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.ps_r{
+    position: relative;
+}
+
+.theme_color{
+    color: $theme-dark-blue;
+}
+
+.ul_style-none{
+    list-style: none;
+}
+
+.margin_none{
+    margin: 0;
+}
+
+.padding_none{
+    padding: 0;
+}
+.transition_action{
+    transition: all .3s linear;
+}
+
+.theme_bg{
+    background-color: $theme-dark-blue;
+}
+
+.sec_space{
+    padding: 2rem 0;
+}
+.border_bottom{
+    border-bottom: 2px solid $theme-dark-blue;
+    padding-bottom: 1.5rem;
+}
+
+.width_full{
+    width: 100%;
+}
+
+.vertical_align{
+    align-items: center;
+}
+
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.sub_heading{
+    // font-family: DancingScript-Regular, sans-serif;
+    font-size: calc(1.5rem + .5vw);
+    color: $theme-dark-blue;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+
+}
+
+.ps_absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.img_object-fit{
+    object-fit: cover;
+}
+
+
+
+.heading_sect{
+    
+    .heading_main{
+        margin-bottom: 1rem;
+        
+        small{
+            letter-spacing: .1rem;
+            display: block;
+            font-size: 50%;
+            font-weight: bold;
+            color: lighten($color: $theme-dark-blue, $amount: 60%);
+        }
+    }
+
+    p{
+        letter-spacing: .1rem;
+        // font-family: DancingScript-Regular, sans-serif;
+        font-size: calc(.9rem + .5vw);
+    }
+}
+
+.btn_bordered{
+    border: 1px solid $theme-light-blue;
+    box-shadow: $white 0 0 5px;
+    color: $white;
+    text-transform: capitalize;
+    font-size: calc(.5rem + .5vw);
+    overflow: hidden;
+
+    &::after{
+        position: absolute;
+        content: '';
+        inset: 0;
+        background-color: $white;
+        transform: translateY(100%);
+        transition: all .2s linear;
+        z-index: -1;
+    }
+
+
+    &:hover{
+        box-shadow: $black 0 0 10px;
+        color: initial;
+        
+
+        &::after{
+            transform: translateY(0);
+        }
+    }
+
+}
+
+.heading_sub{
+    font-weight: bold;
+    color: $theme-dark-blue;
+    font-size: calc(1rem + 2vw);
+}
+
+.heading_small{
+    font-size: calc(.8rem + 1vw);
+}
+
+p{
+    margin: 0;
+}
+
+.img_sect{
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.bg_theme-blue{
+    background-color: $theme-dark-blue;
+}
+
+.custom-scroll-x{
+    overflow-x: auto
+  }
+
+  th, td{
+    white-space: nowrap;
+  }
+
+
+  .modal-dialog {
+    max-width: 100%;
+    margin: 1.75rem auto;
+}
+
+.pt-7{
+    padding-top: 1.5rem;
+}
+
+ul,li,h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+@media(max-width: 576px) {
+    .btn_bordered{
+        font-size: calc(1rem + .5vw);
+    }
+
+
+    .heading_sect{
+        .heading_main{
+            small{
+                text-transform: normal;
+                font-size: 60%;
+            }
+        }
+
+    }
+}
+
