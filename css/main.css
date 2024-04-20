@@ -8881,6 +8881,14 @@ textarea.form-control-lg {
   font-family: Montserrat-Bold;
   src: url(../fonts/Montserrat-Bold.ttf);
 }
+@font-face {
+  font-family: Urbanist-Bold;
+  src: url(../fonts/Urbanist-Bold.ttf);
+}
+@font-face {
+  font-family: Urbanist-Regular;
+  src: url(../fonts/Urbanist-Regular.ttf);
+}
 body {
   font-family: Montserrat-Regular, sans-serif !important;
 }
@@ -8904,6 +8912,10 @@ body {
 
 .ps_r {
   position: relative;
+}
+
+.ps_a {
+  position: absolute;
 }
 
 .theme_color {
@@ -8954,6 +8966,13 @@ body {
   flex-direction: column;
   width: 100%;
   padding: 2rem 0;
+}
+
+.flex_center-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .sub_heading {
@@ -9118,10 +9137,264 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
     letter-spacing: -0.8px;
   }
 }
+.service_intro {
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  margin-top: 3rem;
+  padding: 4rem 0;
+}
+
+.col_contant {
+  position: relative;
+}
+.col_contant::before, .col_contant::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: rgb(194, 225, 249);
+  background: radial-gradient(circle, rgb(194, 225, 249) 0%, rgb(13, 75, 124) 100%);
+  border-radius: 50%;
+  z-index: 100;
+  animation: resized-anim 3s infinite;
+}
+.col_contant::before {
+  top: 45%;
+  left: 5%;
+}
+@keyframes resized-anim {
+  0% {
+    scale: 0.2;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 0.2;
+  }
+}
+.col_contant::after {
+  top: 35%;
+  right: 40%;
+  animation-duration: 4s;
+}
+
+.service_img-sect {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1;
+}
+.service_img-sect .banner-element-2 {
+  bottom: 10rem;
+  right: -5.5rem;
+  width: 5rem;
+}
+.service_img-sect .banner-element-3 {
+  right: -5rem;
+  bottom: -3rem;
+  width: calc(5rem + 2vw);
+}
+.service_img-sect .banner-element-4 {
+  left: -6rem;
+  bottom: 4rem;
+  width: calc(7rem + 3vw);
+}
+.service_img-sect:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 5rem);
+  height: 50%;
+  background: rgb(13, 75, 124);
+  background: linear-gradient(0deg, rgba(194, 225, 249, 0.7175245098) 17%, rgba(13, 75, 124, 0.6558998599) 95%);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.service_text .arrow-img {
+  top: 0;
+  right: 10%;
+  width: calc(5rem + 8vw);
+  animation: relocate-anim 3s infinite linear;
+}
+@keyframes relocate-anim {
+  0% {
+    top: 2rem;
+  }
+  50% {
+    top: -0.5rem;
+  }
+  100% {
+    top: 2rem;
+  }
+}
+.service_text h2 {
+  font-size: calc(2rem + 2vw);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-family: Urbanist-Regular;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+}
+.service_text h2 small {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 30%;
+  text-transform: capitalize;
+  color: #8c8c8c;
+  font-weight: bold;
+}
+.service_text p {
+  width: 70%;
+}
+.service_text a {
+  margin-top: 1.2rem;
+}
+
+.services_intro-further .service_heading {
+  font-size: calc(1rem + 2vw);
+  color: #0D4B7C;
+  font-weight: bold;
+}
+.services_intro-further .services_intro-desc {
+  padding: 1rem 0;
+}
+.services_intro-further .services_intro-desc p {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+.services_intro-further .services_intro-desc .service_heading-sub {
+  font-weight: bold;
+  font-size: calc(0.7rem + 1vw);
+}
+.services_intro-further strong {
+  color: #0D4B7C;
+}
+
+.counter_section .sub_heading {
+  text-align: center;
+  font-weight: bold;
+  margin: 1.5rem 0 1rem 0;
+}
+.counter_section .count-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.counter_section .count-box .counter_icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counter_section .count-box .counter_icon {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2px dashed #ffffff;
+  border-radius: 1rem;
+  width: calc(3rem + 2vw);
+  height: calc(3rem + 2vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.counter_section .count-box .counter_icon i {
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+  font-size: 2rem;
+}
+.counter_section .count-box:hover .counter_icon {
+  border-color: orange;
+  background-color: #ffffff;
+}
+.counter_section .count-box:hover .counter_icon i {
+  color: green;
+}
+.counter_section .count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0D4B7C;
+  display: block;
+  text-align: center;
+  margin: 0.5rem 0;
+  position: relative;
+  margin: 2rem 0 2.5rem 0;
+}
+.counter_section .count:before {
+  content: "";
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 2px solid #0D4B7C;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.counter_section p {
+  font-size: calc(0.8rem + 0.5vw);
+  text-transform: capitalize;
+}
+.counter_section .counter {
+  display: block;
+  width: 75px;
+  font-weight: 900;
+}
+
+@media (max-width: 992px) {
+  .service_intro [class*=col-] {
+    padding: 1rem 12px;
+  }
+  .service_text {
+    margin-bottom: 4rem;
+  }
+  .service_img-sect:before {
+    width: 100%;
+  }
+  .service_img-sect {
+    margin: 0 auto;
+  }
+  .service_img-sect img {
+    width: 100%;
+  }
+  .service_img-sect .banner-element-2 {
+    bottom: 40%;
+    right: 10%;
+    width: calc(7rem + 3vw);
+  }
+  .service_img-sect .banner-element-3 {
+    right: 2%;
+    bottom: -1rem;
+    width: calc(6rem + 3vw);
+  }
+  .service_img-sect .banner-element-4 {
+    left: -3%;
+    bottom: 4rem;
+    width: calc(12rem + 3vw);
+  }
+  .counter_section [class*=col-] {
+    padding: 1rem 12px;
+  }
+}
+@media (max-width: 576px) {
+  .col_contant::after {
+    right: 15%;
+  }
+}
 .preloader {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   inset: 0;
   display: flex;
   justify-content: center;

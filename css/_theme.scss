@@ -12,6 +12,14 @@
     font-family: Montserrat-Bold;
     src: url(../fonts/Montserrat-Bold.ttf);
 }
+@font-face {
+    font-family: Urbanist-Bold;
+    src: url(../fonts/Urbanist-Bold.ttf);
+}
+@font-face {
+    font-family: Urbanist-Regular;
+    src: url(../fonts/Urbanist-Regular.ttf);
+}
 
 // @font-face {
 //     font-family: Raleway-ExtraBold;
@@ -60,6 +68,10 @@ body{
     position: relative;
 }
 
+.ps_a{
+    position: absolute;
+}
+
 .theme_color{
     color: $theme-dark-blue;
 }
@@ -106,6 +118,13 @@ body{
     flex-direction: column;
     width: 100%;
     padding: 2rem 0;
+}
+
+.flex_center-theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .sub_heading{

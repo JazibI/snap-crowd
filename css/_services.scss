@@ -1,0 +1,338 @@
+.service_intro{
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    // height: 100vh;
+    width: 100%;
+    margin-top: 3rem;
+    padding: 4rem 0;
+}
+
+.col_contant{
+    position: relative;
+    &::before,&::after{
+        content: "";
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        background: rgb(194,225,249);
+        background: radial-gradient(circle, rgba(194,225,249,1) 0%, rgba(13,75,124,1) 100%);
+        border-radius: 50%;
+        z-index: 100;
+        animation: resized-anim 3s infinite;
+
+    }
+
+    &::before{
+        top: 45%;
+        left: 5%;
+    }
+
+    @keyframes resized-anim{
+        0% {
+            scale: 0.2;
+        }
+        50% {
+            scale: 1.2;
+        }
+        100% {
+            scale: 0.2;
+        }
+    }
+
+    &::after{
+        top: 35%;
+        right: 40%;
+        animation-duration: 4s;
+        
+    }
+
+    
+    
+}
+
+.service_img-sect{
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+    
+
+    .banner-element-2{
+        bottom: 10rem;
+        right: -5.5rem;
+        width: 5rem;
+    }
+
+    .banner-element-3{
+        right: -5rem;
+        bottom: -3rem;
+        width: calc(5rem + 2vw);
+    }
+
+    .banner-element-4{
+        left: -6rem;
+        bottom: 4rem;
+        width: calc(7rem + 3vw);
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        width: calc(100% + 5rem);
+        height: 50%;
+        background: rgb(13,75,124);
+        background: linear-gradient(0deg, rgba(194,225,249,0.7175245098039216) 17%, rgba(13,75,124,0.6558998599439776) 95%);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+}
+
+
+.service_text{
+
+    
+
+    .arrow-img{
+        top: 0;
+        right: 10%;
+        width: calc(5rem + 8vw);
+        // width: calc(15rem + 3vw);
+        animation: relocate-anim 3s infinite linear;
+        
+    }
+
+    @keyframes relocate-anim{
+        0% {
+            top: 2rem;
+        }
+        50% {
+            top: -0.5rem;
+        }
+        100% {
+            top: 2rem;
+        }
+    }
+
+    h2{
+        font-size: calc(2rem + 2vw);
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-family: Urbanist-Regular;
+        letter-spacing: -1px;
+        margin-bottom: .5rem;
+
+        small{
+            display: block;
+            margin-bottom: .2rem;
+            font-size: 30%;
+            text-transform: capitalize;
+            color: lighten($color: $black, $amount: 55%);
+            font-weight: bold;
+        }
+
+    }
+
+    p{
+        width: 70%;
+    }
+    a{
+        margin-top: 1.2rem;
+    }
+    
+
+    
+}
+
+
+
+//styling of services_intro-further section
+
+.services_intro-further{
+    .service_heading{
+        font-size: calc(1rem + 2vw);
+        color: $theme-dark-blue;
+        font-weight: bold;
+    }
+
+    .services_intro-desc{
+        padding: 1rem 0;
+        p{
+            font-size: .8rem;
+            line-height: 1.3;
+            margin-bottom: .5rem;
+
+        }
+
+        .service_heading-sub{
+            font-weight: bold;
+            font-size: calc(.7rem + 1vw);
+        }
+
+        
+    }
+    strong{
+        color: $theme-dark-blue;
+    }
+}
+
+
+
+//styling of counter-section section
+
+.counter_section {
+
+    .sub_heading{
+        text-align: center;
+        font-weight: bold;
+        margin: 1.5rem 0 1rem 0;
+    }
+
+
+  
+    
+  
+    .count-box {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  
+      .counter_icon-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .counter_icon {
+  
+        display: inline-block;
+        // padding: 1rem;
+        background-color: rgba($black, .2);
+        border: 2px dashed $white;
+        border-radius: 1rem;
+        width: calc(3rem + 2vw);
+        height: calc(3rem + 2vw);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+  
+  
+  
+        i {
+          transition: all .3s ease-in-out;
+          color: $white;
+          font-size: 2rem;
+        }
+      }
+  
+      &:hover {
+  
+        .counter_icon {
+          border-color: orange;
+          background-color: $white;
+        }
+  
+        .counter_icon i {
+          color: green;
+        }
+      }
+    }
+  
+    .count {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $theme-dark-blue;
+      display: block;
+      text-align: center;
+      margin: .5rem 0;
+      position: relative;
+      margin: 2rem 0 2.5rem 0;
+
+      &:before{
+        content: '';
+        position: absolute;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        border: 2px solid $theme-dark-blue;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+      }
+    }
+  
+    p {
+      font-size: calc(.8rem + .5vw);
+      text-transform: capitalize;
+    }
+  
+    .counter {
+      display: block;
+      width: 75px;
+      font-weight: 900;
+    }
+  }
+  
+
+@media(max-width: 992px){
+    .service_intro {
+        [class*="col-"] {
+          padding: 1rem 12px;
+        }
+    }
+    .service_text{
+        margin-bottom: 4rem;
+    }
+    .service_img-sect:before{
+        width: 100%;
+    }
+    .service_img-sect{
+        img{
+            width: 100%;
+        }
+        
+        margin: 0 auto;
+
+        .banner-element-2{
+            bottom: 40%;
+            right: 10%;
+            width: calc(7rem + 3vw);
+        }
+    
+        .banner-element-3{
+            right: 2%;
+            bottom: -1rem;
+            width: calc(6rem + 3vw);
+        }
+    
+        .banner-element-4{
+            left: -3%;
+            bottom: 4rem;
+            width: calc(12rem + 3vw);
+        }
+    }
+
+    //styling of counter-section
+
+    .counter_section {
+        [class*="col-"] {
+          padding: 1rem 12px;
+        }
+    }
+}
+
+
+@media(max-width: 576px){
+    .col_contant::after{
+        right: 15%;
+    }
+}
+
+
+

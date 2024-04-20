@@ -1,43 +1,52 @@
-const tl = gsap.timeline();
 
-tl.to("body", {
-  overflow: "hidden"
-})
-  .to(".preloader .text-container", {
-    duration: .5,
-    opacity: 1,
-    ease: "Power3.easeOut"
-  })
-  .from(".preloader .text-container span", {
-    duration: 1.5,
-    delay: .1,
-    y: 150,
-    skewY: 10,
-    stagger: 0.4,
-    ease: "Power3.easeOut"
-  })
-  .to(".preloader .text-container span", {
-    duration: 1.2,
-    y: 150,
-    skewY: -20,
-    stagger: 0.2,
-    ease: "Power3.easeOut"
-  })
-  .to(".preloader", {
-    duration: 1,
-    height: "0vh",
-    ease: "Power3.easeOut"
-  })
-  .to(
-    "body",
-    {
-      overflow: "auto"
-    },
-    "-=1"
-  )
-  .to(".preloader", {
-    display: "none"
-  });
+
+
+
+
+
+
+
+// const tl = gsap.timeline();
+
+// tl.to(".body", {
+//   overflow: "hidden"
+// // scrollbar:disabled,
+// })
+//   .to(".preloader .text-container", {
+//     duration: .5,
+//     opacity: 1,
+//     ease: "Power3.easeOut"
+//   })
+//   .from(".preloader .text-container span", {
+//     duration: 1.5,
+//     delay: .1,
+//     y: 150,
+//     skewY: 10,
+//     stagger: 0.4,
+//     ease: "Power3.easeOut"
+//   })
+//   .to(".preloader .text-container span", {
+//     duration: 1.2,
+//     y: 150,
+//     skewY: -20,
+//     stagger: 0.2,
+//     ease: "Power3.easeOut"
+//   })
+//   .to(".preloader", {
+//     duration: 1,
+//     height: "0vh",
+//     ease: "Power3.easeOut"
+//   })
+//   .to(
+//     "body",
+//     {
+//       overflow: "auto"
+//     },
+//     "-=1"
+//   )
+//   .to(".preloader", {
+//     display: "none"
+//   });
 
 
 
@@ -465,3 +474,38 @@ if (("ontouchstart" in document.documentElement)) {
       // },
   });
   
+
+
+
+  var counted = 0;
+  $(window).scroll(function () {
+  
+    var oTop = $('#counter').offset().top - window.innerHeight;
+    if (counted == 0 && $(window).scrollTop() > oTop) {
+        $('.count').each(function () {
+            var $this = $(this),
+                countTo = $this.attr('data-count');
+            $({
+                countNum: $this.text()
+            }).animate({
+                    countNum: countTo
+                },
+  
+                {
+  
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function () {
+                        $this.text(this.countNum);
+                        //alert('finished');
+                    }
+  
+                });
+        });
+        counted = 1;
+    }
+  
+  });
