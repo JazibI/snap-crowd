@@ -9349,6 +9349,38 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
   font-weight: 900;
 }
 
+.service_heading {
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.service_list :nth-child(2n) button {
+  padding-left: calc(1rem + 2vw);
+}
+.service_list :nth-child(2n) .modal-footer button, .service_list :nth-child(2n) .modal-header button {
+  padding-left: 12px !important;
+}
+
+.service_list button {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  transition: all 0.3s linear;
+}
+.service_list button:hover {
+  color: #0D4B7C;
+}
+.service_list .modal-body h2 {
+  margin: 1rem 0;
+  color: #0D4B7C;
+  font-weight: bold;
+}
+.service_list .modal-body p {
+  margin-bottom: 1.5rem;
+}
+
 @media (max-width: 992px) {
   .service_intro [class*=col-] {
     padding: 1rem 12px;
