@@ -376,6 +376,20 @@
     }
 }
 
+@media(max-width: 786px){
+    .service_list :nth-child(2n) { 
+        button{
+            padding-left: 12px;
+        }
+    
+        // .modal-footer,.modal-header{
+        //     button{
+        //         padding-left: 12px!important;
+        //     }
+        // }
+     }
+}
+
 
 @media(max-width: 576px){
     .col_contant::after{

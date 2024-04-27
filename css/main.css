@@ -9416,6 +9416,11 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
     padding: 1rem 12px;
   }
 }
+@media (max-width: 786px) {
+  .service_list :nth-child(2n) button {
+    padding-left: 12px;
+  }
+}
 @media (max-width: 576px) {
   .col_contant::after {
     right: 15%;
