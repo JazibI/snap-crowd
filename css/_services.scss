@@ -292,6 +292,7 @@
 .service_list :nth-child(2n) { 
     button{
         padding-left: calc(1rem + 2vw);
+        text-align: left;
     }
 
     .modal-footer,.modal-header{
@@ -379,14 +380,10 @@
 @media(max-width: 786px){
     .service_list :nth-child(2n) { 
         button{
-            padding-left: 12px;
+            padding-left: 12px!important;
         }
     
-        // .modal-footer,.modal-header{
-        //     button{
-        //         padding-left: 12px!important;
-        //     }
-        // }
+        
      }
 }
 

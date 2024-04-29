@@ -9359,6 +9359,7 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 
 .service_list :nth-child(2n) button {
   padding-left: calc(1rem + 2vw);
+  text-align: left;
 }
 .service_list :nth-child(2n) .modal-footer button, .service_list :nth-child(2n) .modal-header button {
   padding-left: 12px !important;
@@ -9418,7 +9419,7 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 }
 @media (max-width: 786px) {
   .service_list :nth-child(2n) button {
-    padding-left: 12px;
+    padding-left: 12px !important;
   }
 }
 @media (max-width: 576px) {
