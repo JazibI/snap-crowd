@@ -46,7 +46,24 @@
     }
 }
 
+.blog_section{
+    .modal-body{
+        h2,h3{
+            text-transform: capitalize;
+        }
+        p{
+            text-transform: inherit;
+        }
+    }
+}
 
+.blog_section{
+    .text-start{
+        h6{
+            text-transform: capitalize;
+        }
+    }
+}
 
 @media(max-width: 768px){
     .bolg_card,.modal-body{
