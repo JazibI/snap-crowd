@@ -47,6 +47,7 @@
 }
 
 
+
 @media(max-width: 768px){
     .bolg_card,.modal-body{
 
@@ -59,4 +60,15 @@
             letter-spacing: -.8px;
         }
     }
+
+    
+.blog_section{
+    
+    [class*="col-"] {
+        border-bottom: 1px solid $theme-dark-blue!important;
+
+    }
+
+
+}
 }

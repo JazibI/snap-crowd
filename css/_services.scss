@@ -155,6 +155,7 @@
         font-size: calc(1rem + 2vw);
         color: $theme-dark-blue;
         font-weight: bold;
+        text-align: left;
     }
 
     .services_intro-desc{
@@ -299,6 +300,9 @@
         button{
             padding-left: 12px!important;
         }
+    }
+    p{
+        text-transform: capitalize;
     }
  }
 

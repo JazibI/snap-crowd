@@ -9136,6 +9136,9 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
   .bolg_card p, .modal-body p {
     letter-spacing: -0.8px;
   }
+  .blog_section [class*=col-] {
+    border-bottom: 1px solid #0D4B7C !important;
+  }
 }
 .service_intro {
   background-image: url(../img/bg.jpg);
@@ -9260,6 +9263,7 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
   font-size: calc(1rem + 2vw);
   color: #0D4B7C;
   font-weight: bold;
+  text-align: left;
 }
 .services_intro-further .services_intro-desc {
   padding: 1rem 0;
@@ -9363,6 +9367,9 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 }
 .service_list :nth-child(2n) .modal-footer button, .service_list :nth-child(2n) .modal-header button {
   padding-left: 12px !important;
+}
+.service_list :nth-child(2n) p {
+  text-transform: capitalize;
 }
 
 .service_list button {
@@ -9964,6 +9971,9 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 .case_study-col {
   gap: 2rem;
   flex-direction: column;
+}
+.case_study-col p {
+  text-transform: capitalize;
 }
 
 .case_study-col {
