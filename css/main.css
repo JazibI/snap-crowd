@@ -9105,6 +9105,8 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 .bolg_card .blog_card-img-sect .blog_card-img, .blog_section .blog_card-img-sect .blog_card-img {
   position: absolute;
   inset: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .bolg_card .blog_title, .blog_section .blog_title {
   font-weight: bold;
